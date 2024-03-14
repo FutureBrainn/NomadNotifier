@@ -49,8 +49,8 @@ export default function Destination() {
             >
                 <option value="">Choose an option:</option>
                 {attractions.map((attraction) => (
-                    <option key={attraction.id} >
-                        {attraction.id}
+                    <option key={attraction.country} value={attraction.country}>
+                        {attraction.city}, {attraction.country}
                     </option>
                 ))}
             </select>
