@@ -6,11 +6,11 @@ export default function PlanTravel() {
    const navigate = useNavigate();
    const location = useLocation();
 
-   const { people, destination, hotel } = location.state || { people: 1, destination: '', hotel: '' };
+   const { people, selectedAttraction, hotel } = location.state || { people: 1, destination: '', hotel: '' };
 
 
    const handleNext = () => {
-       navigate('/confirm-reservation', {state: { people, destination, hotel, number }});
+       navigate('/confirm-reservation', {state: { people, selectedAttraction, hotel, number }});
    };
 
 

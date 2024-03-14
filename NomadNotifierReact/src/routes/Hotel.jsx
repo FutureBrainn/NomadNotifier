@@ -7,7 +7,7 @@ export default function Hotel() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const { people, destination } = location.state || { people: 1, destination: '' };
+    const { people, selectedAttraction } = location.state || { people: 1, destination: '' };
 
     const hotels = [
         { id: 1, name: 'Hilltop Hotel' },
@@ -20,7 +20,7 @@ export default function Hotel() {
 
 
     const handleNext = () => {
-        navigate('/roomnumber', { state: { people, destination, hotel } });
+        navigate('/roomnumber', { state: { people, selectedAttraction, hotel } });
     };
 
 
